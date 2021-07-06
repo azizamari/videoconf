@@ -13,7 +13,7 @@ navigator.mediaDevices.getUserMedia({
 
 const addVideoStream=(video,stream)=>{
     video.srcObject=stream;
-    video.addEventListener('loaded+metadata',()=>{
+    video.addEventListener('loadedmetadata',()=>{
         video.play();
     });
     videoGrid.append(video);
